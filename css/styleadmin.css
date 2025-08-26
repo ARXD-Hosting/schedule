@@ -1,0 +1,175 @@
+/* Responsive Admin Layout */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background:#0b0c10;
+    color:#c5c6c7;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==================== Centered Admin Login ==================== */
+.login-container {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    height: 100vh;           /* full viewport height */
+    background: #0b0c10;     /* match admin background */
+    margin: 0;
+    padding: 0;
+}
+
+.login-box {
+    background: #1f2833;
+    padding: 25px 30px;
+    border-radius: 8px;
+    color: #c5c6c7;
+    width: 320px;
+    box-shadow: 0 0 15px rgba(77, 166, 255, 0.3);
+}
+
+.login-box input,
+.login-box button {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-box button {
+    background: #45a29e;
+    color: #0b0c10;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-box button:hover {
+    background: #66fcf1;
+}
+
+.sidebar {
+    width: 200px;
+    float: left;
+    padding: 10px;
+    background: #1f2833;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.calendar {
+    margin-left: 210px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.day {
+    border: 1px solid #45a29e;
+    border-radius: 4px;
+    padding: 4px;
+    min-height: 65px;
+    position: relative;
+    background: #1f2833;
+}
+
+.date-num {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.shift {
+    background: #45a29e;
+    padding: 2px 4px;
+    margin: 2px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #0b0c10;
+    font-size: 13px;
+}
+
+.shift-afternoon {
+    background: #66fcf1;
+}
+
+.droppable-hover {
+    outline: 2px dashed #66fcf1;
+}
+
+.shift-unsaved {
+    outline: 1px solid #f1c40f;
+}
+
+.login-box {
+    background: #1f2833;
+    padding: 18px;
+    border-radius: 6px;
+    color: #c5c6c7;
+    width: 280px;
+}
+
+input, button {
+    width: 100%;
+    margin: 4px 0;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 5px 7px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 180px;
+        font-size: 13px;
+    }
+    .calendar {
+        margin-left: 190px;
+        gap: 3px;
+    }
+    .day {
+        min-height: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 160px;
+        font-size: 12px;
+    }
+    .calendar {
+        margin-left: 170px;
+        gap: 2px;
+    }
+    .day {
+        min-height: 55px;
+    }
+    .shift {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 140px;
+        font-size: 12px;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .calendar {
+        margin-left: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+}

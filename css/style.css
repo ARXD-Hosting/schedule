@@ -1,0 +1,102 @@
+/* ==================== Base ==================== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0c10;
+    color: #c5c6c7;
+    font-size: 15px;
+    margin: 0;
+    padding: 10px;
+}
+
+/* ==================== Calendar ==================== */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin: 0 auto;
+}
+
+.day {
+    border: 1px solid #45a29e;
+    border-radius: 4px;
+    padding: 4px;
+    min-height: 65px;
+    position: relative;
+    background: #1f2833;
+}
+
+.date-num {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+/* ==================== Shifts ==================== */
+.shift-slot {
+    border: 1px dashed #444;
+    min-height: 25px;
+    margin-bottom: 3px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.shift {
+    background: #45a29e;
+    padding: 2px 4px;
+    margin: 2px 0;
+    border-radius: 4px;
+    cursor: default; /* employee view: not draggable */
+    color: #0b0c10;
+    font-size: 13px;
+    text-align: center;
+}
+
+.shift-afternoon {
+    background: #66fcf1;
+}
+
+.droppable-hover {
+    outline: none; /* no drag highlight for employee */
+}
+
+.shift-unsaved {
+    outline: none; /* no unsaved outline */
+}
+
+/* ==================== Login Box ==================== */
+.login-box {
+    background: #1f2833;
+    padding: 18px;
+    border-radius: 6px;
+    color: #c5c6c7;
+    width: 280px;
+}
+
+input, button {
+    width: 100%;
+    margin: 4px 0;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.btn {
+    display: none; /* hide admin buttons in employee view */
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 1200px) {
+    .day { min-height: 60px; }
+}
+
+@media (max-width: 992px) {
+    .day { min-height: 55px; }
+    .shift { font-size: 12px; }
+}
+
+@media (max-width: 768px) {
+    .calendar { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+}
+
+@media (max-width: 480px) {
+    .calendar { grid-template-columns: 1fr; }
+}
